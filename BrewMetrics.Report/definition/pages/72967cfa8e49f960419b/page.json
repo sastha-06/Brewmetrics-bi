@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "72967cfa8e49f960419b",
   "displayName": "BrewMetrics – Coffee Sales Performance Dashboard",
-  "displayOption": "ActualSize",
+  "displayOption": "FitToPage",
   "height": 950,
   "width": 1289
 }

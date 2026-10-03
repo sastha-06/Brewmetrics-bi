@@ -43,6 +43,39 @@ DIVIDE (
 
 This calculates the percentage change in sales compared with the previous month.
 
+### 4. Running Total Sales
+
+Copilot suggested:
+
+```DAX
+Running Total Sales =
+CALCULATE (
+    [Total Sales],
+    FILTER (
+        ALLSELECTED ( Dim_Date ),
+        Dim_Date[date] <= MAX ( Dim_Date[date] )
+    )
+)
+```
+
+This measure calculates cumulative sales through the current date while respecting the selected date range and other report filters.
+
+### 5. City Sales Rank
+
+Copilot suggested:
+```DAX
+City Sales Rank =
+RANKX (
+    ALL ( Dim_City[city] ),
+    [Total Sales],
+    ,
+    DESC,
+    DENSE
+)
+```
+
+This measure ranks cities according to Total Sales, with the highest-sales city receiving rank 1.
+The measure was reviewed and tested in Power BI.
 ## Copilot Suggestion and Review
 
 Copilot's initial response suggested that the date table should contain a complete and contiguous range of dates and have an active one-to-many relationship with Fact_Sales.
