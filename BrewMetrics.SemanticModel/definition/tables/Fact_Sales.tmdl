@@ -8,6 +8,16 @@ table Fact_Sales
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Previous Month Sales' =
+			
+			CALCULATE (
+			    [Total Sales],
+			    DATEADD ( Dim_Date[date], -1, MONTH )
+			)
+		lineageTag: f6373532-66c0-4c11-99fa-bfca9014645b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		
 	column sale_id
 		dataType: string
 		lineageTag: 7d48f41b-dc22-4342-88e2-2e3f8a297b7b
