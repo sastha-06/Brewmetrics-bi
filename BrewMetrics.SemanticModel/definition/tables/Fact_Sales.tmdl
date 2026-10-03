@@ -1,6 +1,13 @@
 table Fact_Sales
 	lineageTag: ff753db1-6b70-4f5a-8a46-d052b890d737
 
+	measure 'Total Sales' =
+			
+			SUM ( Fact_Sales[sales_amount] )
+		lineageTag: febfab82-7554-40d7-8d82-1097af6b13be
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column sale_id
 		dataType: string
 		lineageTag: 7d48f41b-dc22-4342-88e2-2e3f8a297b7b
