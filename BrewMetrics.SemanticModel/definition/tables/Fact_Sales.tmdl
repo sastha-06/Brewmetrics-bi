@@ -17,7 +17,16 @@ table Fact_Sales
 		lineageTag: f6373532-66c0-4c11-99fa-bfca9014645b
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
-		
+
+	measure 'MoM Sales Growth %' =
+			
+			DIVIDE (
+			    [Total Sales] - [Previous Month Sales],
+			    [Previous Month Sales]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0fc4ff74-d01d-4308-8f13-a8549b752f52
+
 	column sale_id
 		dataType: string
 		lineageTag: 7d48f41b-dc22-4342-88e2-2e3f8a297b7b
