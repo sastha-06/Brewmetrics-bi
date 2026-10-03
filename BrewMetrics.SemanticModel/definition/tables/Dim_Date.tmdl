@@ -21,16 +21,19 @@ table Dim_Date
 		dataType: int64
 		formatString: 0
 		lineageTag: 5840dc01-4b65-4783-97b6-67f8e8e572a7
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Year
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column 'Month Name'
 		dataType: string
 		lineageTag: 679ff72e-a3fd-41af-b158-dbe763d3b53a
 		summarizeBy: none
 		sourceColumn: Month Name
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -38,10 +41,10 @@ table Dim_Date
 		dataType: int64
 		formatString: 0
 		lineageTag: cdb9c142-406b-4a6b-a0e5-2b6561c8d81f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Month
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	partition Dim_Date = m
 		mode: import
