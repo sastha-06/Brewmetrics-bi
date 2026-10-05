@@ -25,11 +25,13 @@ The dimension tables are related to the Fact_Sales table to support filtering an
 
 ## DAX Measures
 
-The report includes three main DAX measures:
+The report includes five main DAX measures:
 
 - **Total Sales** – calculates total sales amount.
 - **Previous Month Sales** – calculates sales for the previous month.
 - **MoM Sales Growth %** – calculates the percentage change in sales compared with the previous month.
+- **Running Total Sales** – calculates cumulative sales up to the current date while respecting the selected date range and report filters.
+- **City Sales Rank** – ranks cities based on their total sales, with the highest-sales city receiving rank 1.
 
 ## Dashboard Insights
 
